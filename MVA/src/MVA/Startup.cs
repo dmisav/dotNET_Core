@@ -21,11 +21,14 @@ namespace MVA
         public void Configure(IApplicationBuilder app)
         {
             app.UseIISPlatformHandler();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
             });
+
+           
         }
 
         // Entry point for the application.
